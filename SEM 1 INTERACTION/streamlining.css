@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Futura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+a:hover {
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+body {
+    cursor: url('static/red\ dot\ cursor.png'), auto;
+    background-image: url('./static/streamlining/metal\ background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #C0C0C0; 
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Tilt Warp', sans-serif;
+    color: #c72027;
+    margin: 0;
+    padding: 0;
+    font-size: 80pt;
+    margin-bottom: 0;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+.centered-heading {
+    text-align: center;
+}
+    
+#horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    justify-content: flex-start; /* Align items to the start */
+}
+
+#horizontal-scroll-container img {
+    max-height: 100%; /* Adjust the height as needed */
+    margin:0; /* Adds some space between the images */
+}
+
+.image-container {
+    position: relative;
+    max-height: fit-content;
+    transition: transform 0.3s ease;
+    width: 450px;
+}
+
+.image-container img {
+    height: 40%; /* Makes image responsive to the container's width */
+    max-height: 200px; /* Adjust as per your design requirement */
+    width: auto;
+    padding: 0;
+    display: block;
+}
+
