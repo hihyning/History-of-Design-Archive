@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Futura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+.container {
+    text-align: center;
+    padding: 0%;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+}
+
+.full-page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: url('static/red\ dot\ cursor.png'), auto;
+    pointer-events: none; /* This allows clicks to pass through */
+}
+
+button {
+    padding: 10px 20px;
+    background-color:  #c72027;
+    color: #fff;
+    border: none;
+    font-family: "Futura", sans-serif;
+    border-radius: 12px;
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: url('static/red\ dot\ cursor.png'), auto;
+    z-index: 0;
+}
+
+a:hover {
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+body {
+    background-image: url('./static/paper\ background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ece5da; 
+    cursor: url('static/red\ dot\ cursor.png'), auto;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    perspective: 1000px;
+    overflow: hidden; /* Prevent scrolling during the transition */
+}
+
+h1 {
+    font-family: 'Tilt Warp', sans-serif;
+    color: #c72027;
+    margin: 0;
+    padding: 0;
+    font-size: 80pt;
+    margin-bottom: 0;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+.invisible-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90pt;
+    z-index: 3;
+    background: transparent;
+    /* You can add additional styles to the invisible link if needed */
+}
+    
+h2 {
+    font-family: 'Tilt Warp', sans-serif;
+    color: #c72027;
+    margin-top: 0%;
+    font-size: 50pt;
+    line-height: 10px;
+}
+
+h3 {
+    font-family: "Futura", sans-serif;
+    color: #c72027;
+    margin: 0%;
+}
+
+h4 {
+    font-family:"Futura", sans-serif;
+    color: #c72027;
+    margin-top: 0;
+    margin-bottom: 1%;
+    font-size: 25px; 
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1.5%;
+    margin-top: 0.05%;
+}
+
+#userName {
+    color: #c72027;
+    font-weight: bold;
+}
+
+#userInput {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.image-link1 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 400px;
+    height: auto;
+}
+.image-link1:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container1 {
+    position: absolute;
+    display: inline-block;
+    width: 400px;
+    height: auto;
+    top: 480px;
+    left: 30px;
+}
+.image-container1:hover .hover-text1 {
+    opacity: 1;
+}
+.hover-text1 {
+    transition: filter 0.25s;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: medium;
+    pointer-events: none;
+    bottom: 20px;
+    left: 200px;
+}
+
+.image-link2 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 230px;
+    height: auto;
+}
+
+.image-link2:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container2 {
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    top: 200px;
+    left: 50px;
+}
+.image-container2:hover .hover-text2 {
+    opacity: 1;
+}
+.hover-text2 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: large;
+    pointer-events: none;
+}
+
+.image-link3 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 250px;
+    height: auto;
+}
+
+.image-link3:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container3 {
+    position: absolute;
+    display: inline-block;
+    width: 220px;
+    height: auto;
+    left: 1100px;
+    top: 280px
+}
+.image-container3:hover .hover-text3 {
+    opacity: 1;
+}
+.hover-text3 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    color: #fff;
+    padding: 0;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: medium;
+    pointer-events: none;
+}
+
+.image-link4 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 300px;
+    height: auto;
+}
+
+.image-link4:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container4 {
+    position: absolute;
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    left: 700px;
+    top: 250px
+}
+.image-container4:hover .hover-text4 {
+    opacity: 1;
+}
+.hover-text4 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: #fff;
+    padding: 0;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: large;
+    pointer-events: none;
+}
+.image-link5 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 120px;
+    height: auto;
+}
+
+.image-link5:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+
+.image-link-wrapper5:hover {
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+.image-container5 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    left: 550px;
+    top: 250px
+}
+
+.image-container5:hover .hover-text5 {
+    opacity: 1;
+}
+  
+.page-flip5 {
+    background-image: url('./static/paper\ background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    position: fixed; /* Use fixed to cover the entire viewport */
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+  }
+
+.front-content5, .backside-content5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.backside-content5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url('./static/pop/pop\ screenshot.png'); /* Replace with the path to your screenshot */
+    background-size: cover;
+    background-position: center;
+}
+  
+.hover-text5 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    color: #fff;
+    padding: 0;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: medium;
+    pointer-events: none;
+}
+.image-link6 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 460px;
+    height: auto;
+}
+
+.image-link6:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container6 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    left: 420px;
+    top: 450px
+}
+.image-container6:hover .hover-text6 {
+    opacity: 1;
+}
+.hover-text6 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    color: #fff;
+    padding: 0;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: large;
+    pointer-events: none;
+}
+.image-link7 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 220px;
+    height: auto;
+}
+
+.image-link7:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container7 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    left: 300px;
+    top: 280px
+}
+.image-container7:hover .hover-text7 {
+    opacity: 1;
+}
+.hover-text7 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 38%;
+    left: 18%;
+    color: #fff;
+    padding: 0;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: large;
+    pointer-events: none;
+}
+.image-link8 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 120px;
+    height: auto;
+}
+
+.image-link8:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container8 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    left: 1000px;
+    top: 230px
+}
+.image-container8:hover .hover-text8 {
+    opacity: 1;
+}
+.hover-text8 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 12%;
+    right: -10%;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: medium;
+    pointer-events: none;
+}
+.image-link9 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 230px;
+    height: auto;
+}
+
+.image-link9:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container9 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    left: 1280px;
+    top: 150px
+}
+.image-container9:hover .hover-text9 {
+    opacity: 1;
+}
+.hover-text9 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: large;
+    pointer-events: none;
+}
+.image-link10 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 260px;
+    height: auto;
+}
+
+.image-link10:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container10 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    left: 850px;
+    top: 500px
+}
+.image-container10:hover .hover-text10 {
+    opacity: 1;
+}
+.hover-text10 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 55%;
+    left: 26%;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: medium;
+    pointer-events: none;
+}
+.image-link11 {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 200px;
+    height: auto;
+}
+
+.image-link11:hover {
+    filter: grayscale(100%) brightness(0.6); /* Convert image to black and white on hover */
+}
+.image-container11 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    left: 1100px;
+    top: 480px
+}
+.image-container11:hover .hover-text11 {
+    opacity: 1;
+}
+.hover-text11 {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    font-size: medium;
+    pointer-events: none;
+}
+.speech-bubble-link {
+    transition: 0.25s; /* Apply smooth transition effect on filter property */
+    position: relative;
+    width: 180px;
+    height: auto;
+    opacity: 0.3;
+}
+
+.speech-bubble {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    left: 1180px;
+    top: 200px
+}
+.speech-bubble:hover .hover-bubble {
+    opacity: 1;
+}
+
+.speech-bubble:hover .speech-bubble-link {
+    opacity: 1;
+}
+
+.speech-bubble:hover .question-link {
+    opacity: 0;
+}
+
+.hover-bubble {
+    transition: filter 0.25s;
+    position: absolute;
+    top: 9%;
+    left: 25%;
+    color: black;
+    padding: 10px;
+    opacity: 0;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    font-size: 11pt;
+    pointer-events: none;
+}
+
+.question-link {
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    left: 15px;
+    top: 7px
+}
+
+#fadeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 999; /* Below the radial div */
+}
+
+#radialTransition {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    z-index: 1000; /* Above the fade overlay */
+}
+.fade-in {
+    animation: fadeInEffect 5s ease forwards;
+}
+@keyframes fadeInEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

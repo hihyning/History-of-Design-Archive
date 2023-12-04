@@ -1,0 +1,41 @@
+body {
+    background-image: url('./static/surrealism/surrealism\ background.gif');
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    cursor: url('/static/surrealism/surrealism\ cursor.gif'), auto; /* Set the custom cursor */
+}
+
+#object {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    position: absolute;
+    transition: transform 0.2s;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.image-container:hover img {
+    filter: grayscale(0%);
+}
+

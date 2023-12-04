@@ -1,0 +1,369 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Futura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+h1 {
+    font-family: "MuseoModerno";
+    color: black;
+    font-size: 55pt;
+    letter-spacing: -2pt;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 70px;
+    margin-bottom: 0%;
+    position: relative;
+    z-index: 10;
+    line-height: 0.9;
+}
+h2 {
+    font-family: "Futura", sans-serif;
+    color: #c72027;
+    margin: 0%;
+    padding: 0%;
+    font-size: 15pt;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1;
+}
+
+h3 {
+    font-family: "Futura", sans-serif;
+    color: #c72027;
+    padding: 0%;
+    margin: 0;
+    font-size: 20pt;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1;
+}
+
+h4 {
+    font-family: "Futura", sans-serif;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    line-height: 20px;
+    font-size: 15t;
+    white-space: nowrap;
+}
+
+p {
+    font-family: "Merriweather", serif;
+    margin-top: 2px;
+    padding: 5px;
+    line-height: 15px;
+    font-size: 9pt;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    cursor: url('static/red\ dot\ cursor.png'), auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+
+.shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0%;
+    position: absolute;
+    transition: background-color 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+    border: 9px solid rgb(0, 0, 0); /* Thick black border */
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+
+}
+
+.shape img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Prevents the image from capturing the click event */
+}
+
+.shape:hover img {
+    opacity: 1;
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+/* Hover effect to fade out the background color */
+.shape:hover::before {
+    opacity: 0;
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+
+}
+
+.shape img {
+    display: block;  /* Initially show the image */
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+.shape .text-content {
+    display: none;  /* Initially hide the text */
+    color: black;   /* Text color */
+    padding: 5px; /* Add padding for text inside */
+    box-sizing: border-box; /* Include padding in width and height */
+    word-wrap: break-word; /* Break words to prevent overflow */
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    overflow: hidden; /* Hide overflow, or use 'auto' to add scroll */
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+.shape.clicked img {
+    display: none;  /* Hide image on click */
+    border-width: 0;
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+.shape.clicked .text-container{
+    display: none;  /* Hide image on click */
+    border-width: 0;
+    word-wrap: break-word; /* Break words to prevent overflow */
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    overflow: hidden; /* Hide overflow, or use 'auto' to add scroll */
+}
+
+.shape.clicked .text-content {
+    background-color: #f0f0f0;
+    display: block;  /* Show text on click */
+    width: 425px;
+    height: 300px;
+    overflow: hidden;
+    word-wrap: break-word; /* Break words to prevent overflow */
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    overflow: hidden; /* Hide overflow, or use 'auto' to add scroll */
+}
+
+#clickable-h1:hover {
+    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    color: blue; /* Changes color to red on hover */
+}
+#clickable-h1.clicked #new-text {
+    display: block;  /* Show text on click */
+    word-wrap: break-word; /* Break words to prevent overflow */
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    overflow: hidden; /* Hide overflow, or use 'auto' to add scroll */
+    width: 425px;
+    height: 300px;
+}
+
+.text-container #new-text {
+    display: block;
+    width: 425px;
+    height: 300px;
+    word-wrap: break-word; /* Break words to prevent overflow */
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    overflow: hidden; /* Hide overflow, or use 'auto' to add scroll */
+}
+
+.text-container .text-content {
+    display: none; /* Initially hide the text */
+    color: black; /* Text color */
+    padding: 10px; /* Add padding for text inside */
+    word-wrap: break-word; /* Break words to prevent overflow */
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    overflow: auto; /* Add scroll for overflow */
+    width: 425px;
+    height: 300px;
+    box-sizing: border-box; /* Include padding in size calculations */
+    /* Consider adding font-size and line-height properties */
+}
+
+.text-container {
+    position: absolute;
+    background-color:  #f0f0f0;
+    width: 425px;
+    height: 300px;
+    top: 265px;
+    left: 540px;
+    padding: 5px;
+    margin-right: 20px;
+    overflow: auto;
+    word-wrap: break-word; /* Break words to prevent overflow */
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    box-sizing: border-box; /* Include padding in size calculations */
+}
+
+#shape1 {
+    top: 0px;
+    left: 545px;
+    background-color: red;
+    width: 410px;
+    height: 250px
+}
+#shape1 .text-content {
+    width: 410px;
+    height: 250px
+}
+
+#shape3 {
+    top: 560px;
+    left: 850px;
+    background-color: white;
+    width: 380px;
+    height: 255px
+}
+#shape3 .text-content {
+    width: 380px;
+    height: 255px
+}
+
+#shape4 {
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    width: 275px;
+    height: 250px
+}
+#shape4 .text-content {
+    width: 275px;
+    height: 250px
+}
+
+#shape5 {
+    top: 0px;
+    left: 965px;
+    background-color: blue;
+    width: 265px;
+    height: 550px
+}
+#shape5 .text-content {
+    width: 265px;
+    height: 550px
+}
+
+#shape6 {
+    top: 560px;
+    left: 0px;
+    background-color: blue;
+    width: 370px;
+    height: 255px
+}
+#shape6 .text-content {
+    width: 370px;
+    height: 255px
+}
+
+#shape7 {
+    top: 260px;
+    left: 0px;
+    background-color: red;
+    width: 340px;
+    height: 290px
+}
+#shape7 .text-content {
+    width: 340px;
+    height: 290px
+}
+
+#shape8 {
+    top: 259px;
+    left: 350px;
+    background-color: yellow;
+    width: 185px;
+    height: 290px
+}
+#shape8 .text-content {
+    width: 185px;
+    height: 290px
+}
+
+#shape9 {
+    top: 0px;
+    left: 285px;
+    background-color: white;
+    width: 250px;
+    height: 250px
+}
+#shape9 .text-content {
+    width: 250px;
+    height: 250px
+}
+
+#shape10 {
+    top: 560px;
+    left: 380px;
+    background-color: white;
+    width: 300px;
+    height: 255px
+}
+#shape10 .text-content {
+    width: 300px;
+    height: 255px
+}
+
+#shape11 {
+    top: 560px;
+    left: 690px;
+    background-color: yellow;
+    width: 150px;
+    height: 255px
+}
+#shape11 .text-content {
+    width: 150px;
+    height: 255px
+}
+
+#shape12 {
+    top: 0px;
+    left: 1240px;
+    background-color: yellow;
+    width: 270px;
+    height: 220px
+}
+#shape12 .text-content {
+    width: 270px;
+    height: 220px
+}
+
+#shape13 {
+    top: 230px;
+    left: 1240px;
+    background-color: red;
+    width: 270px;
+    height: 190px
+}
+#shape13 .text-content {
+    width: 270px;
+    height: 190px
+}
+
+#shape14 {
+    top: 420px;
+    left: 1240px;
+    background-color: white;
+    width: 270px;
+    height: 395px
+}
+#shape14 .text-content {
+    width: 270px;
+    height: 395px
+}
+
+.shape {
+    opacity: 0; /* Start with shapes hidden */
+    animation: fadeInAnimation 1s ease forwards; /* Animation */
+}
+
+/* Define the keyframes for the fade-in animation */
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+    }
+}
