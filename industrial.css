@@ -1,0 +1,185 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: black;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: 15pt;
+    
+}
+h2 {
+    font-family: 'Pinyon Script', cursive;
+    color: #1e140a;
+    font-size: 40pt;
+}
+
+#userNameDisplay {
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    bottom: 110px;
+    right: 420px;
+    text-align: center;
+    transform: rotate(4deg);
+}
+#userName {
+    position: relative;
+    /* transform: translate(180px, 200px) rotate(5deg); /* Translate and rotate */
+    vertical-align: middle;
+    transform: rotate(4deg);
+    text-align: center;
+}
+
+#invitation {
+    position: absolute;
+    top: 120px;
+    left: 180px
+}
+
+#landingPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url(static/industrialism/background0.png);
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    cursor: url('.static/red\ dot\ cursor.png'), auto;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+#startButton, #exitButton, #returnButton {
+        padding: 0px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: none;
+        font-family: 'Imperial Script', cursive;
+        font-size: 50px;
+        border-radius: 12px;
+        height: 50px;
+        width: 150px;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+
+#startButton:hover, #exitButton:hover , #returnButton:hover {
+    color: black;
+    cursor: url('.static/red\ dot\ cursor\ hover.png'), auto;
+}
+
+#startButton {
+    position: absolute;
+    top: 250px;
+    left: 130px;
+}
+#exitButton {
+    position: absolute;
+    top: 250px;
+    left: 300px;
+}
+#returnButton {
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+#parentContainer {
+    position: relative;
+    width: 100%; /* Adjust as per your layout */
+    height: 100%; /* Adjust as per your layout */
+}
+#landingPage, #mainContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+#mainContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+    display: none; /* Initially hidden */
+    opacity: 0;
+    cursor: url('.static/red\ dot\ cursor.png'), auto
+}
+
+#backgroundContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease-in-out; /* Adjust duration and easing as needed */
+    /* Add background styles here */
+}
+
+#infoBar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    white-space: pre-wrap;
+    padding: 10px;
+    box-sizing: border-box;
+    word-wrap: break-word; /* Break words to prevent overflow */
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    overflow: auto; /* Add scroll for overflow */
+    line-height: 23px;
+}
+
+.backgroundImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#instructions {
+    position: absolute;
+    top: 0;
+    left: 280px;
+    display: block;
+    color: white;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    padding: 10px;
+    z-index: 2;
+}
+
+@keyframes slideInFromTop {
+    from { transform: translateY(-600px); opacity: 1; }
+    to { transform: translateY(0);  opacity: 1;}
+}
+
+@keyframes slideOutToTop {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-600px); opacity: 1; }
+}
+
+.image-slide-in {
+    animation: slideInFromTop 1s ease-in forwards;
+}
+
+.image-slide-out {
+    animation: slideOutToTop 1s ease-out forwards;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>History of Design: Postwar</title>
+  <link rel="stylesheet" href="postwar.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./static/red dot cursor hover.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+  </style>
+</head>
+<body>
+    <div class="orbit-container">
+        <div class="orbit-center">
+            <div class="orbit">
+                <img id="orbit1" src='./static/post war icon.png' style="width: 100%; height: 80%;">
+            </div>
+            <div class="orbit">
+                <img id="orbit2" src='./static/postwar/poster .png' style="width: 100%; height: 112%;">
+            </div>
+            <div class="orbit">
+                <img id="orbit3" src='./static/postwar/panton.png'>
+            </div>
+            <div class="orbit">
+                <img id="orbit4" src='./static/postwar/viewmaster.png'>
+            </div>
+            <div class="orbit">
+                <img id="orbit5" src='./static/postwar/Ball_chair.png'>
+            </div>
+            <div class="orbit">x
+                <img id="orbit6" src='./static/postwar/eames.png'>
+            </div>
+            
+
+            <!-- Add more orbiting elements by copying the div with class "orbit" -->
+        </div>
+        
+    </div>
+    <div class="infoCard" id="infoCard">
+        <h1 id="infoCardHeader">POST WAR</h1>
+       <!-- <h2 id="infoCardSubHeader">(1945-1985)</h2> -->
+        <p id="infoCardInfo"></p>
+        
+    </div>
+    <script src="./postwar.js">
+let selectedInfoIndex = 0; // Index of the selected information
+
+infoCard.innerHTML = infoCardHeaders[selectedInfoIndex] + 
+                     infoCardSubHeaders[selectedInfoIndex] + 
+                     infoCardInfos[selectedInfoIndex];
+
+    </script>
+</body>
+</html>
