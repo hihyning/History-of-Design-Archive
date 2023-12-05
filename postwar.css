@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url(./static/postwar/postwarbg.gif);
+  }
+
+  h1 {
+    font-family: 'Dhurjati', sans-serif;
+    color: aliceblue;
+    text-align: center;
+    font-size: 50pt; 
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+  }
+
+  h2 {
+    font-family: "Futura", sans-serif;
+    color: #c72027;
+    margin: 0%;
+    font-size: 20pt;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow:100px, 100px, 100px, whitesmoke;
+  }
+
+  p {
+    font-family: "Merriweather", serif;
+    color: white;
+    margin: 0;
+    padding: 0px;
+    line-height: 17px;
+    font-size: 10pt;
+    text-align: center;
+    text-overflow:ellipsis;
+    vertical-align: middle;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, 50%);
+  }
+
+  #infoCardSubHeader {
+    position: absolute;
+    vertical-align: middle;
+    top: 220px;
+  }
+
+  #infoCardHeader {
+    position: absolute;
+    vertical-align: middle;
+    top: 150px
+  }
+  
+  .orbit-container{
+    position: absolute;
+    left: 45%;
+    top: 40%; 
+    size: 200px
+  }
+  .orbit-container img{
+    position: absolute;
+    object-fit:contain;
+    overflow: auto;
+  }
+  .infoCard {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    left: 39%;
+    top: 25%; 
+    border-radius: 50%;
+    background-image: url(./static/postwar/moon.jpg);
+    background-size: cover;
+    background-position: absolute;
+    align-self: center;
+    vertical-align: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    padding: 0%;
+    transition: transform 0.8s;
+  }
+
+  .flipCard {
+    transform:translate(0%,0%) rotateY(360deg);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.8s;
+  }
+
+  .orbit-center {
+    position: relative;
+    left: 50%;
+    top: 50%; 
+  }
+  
+  .orbit {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  /* Adjust orbit distance from the center */
+  #orbit1 {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: orbit1 7s linear infinite;
+  }
+  
+  #orbit2 {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: orbit2 7s linear infinite;
+  }
+  
+  #orbit3 {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: orbit3 7s linear infinite;
+  }
+
+  #orbit4 {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: orbit4 7s linear infinite;
+  }
+
+  #orbit5 {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: orbit5 7s linear infinite;
+  }
+
+  #orbit6 {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: orbit6 7s linear infinite;
+  }
+  
+  /* Define rotation animation */
+  @keyframes orbit1 {
+    from {
+      transform-origin: center center;
+      transform: rotate(0) translate(-300px) rotate(0);
+    }
+    to {
+      transform-origin: center center;
+      transform: rotate(360deg) translate(-300px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit2 {
+    from {
+      transform-origin: center center;
+      transform: rotate(0) translate(300px) rotate(0);
+    }
+    to {
+      transform-origin: center center;
+      transform: rotate(360deg) translate(300px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit3 {
+    from {
+        transform-origin: center center;
+        transform: rotate(0) translateX(160px) translateY(240px) rotate(0);
+      }
+      to {
+        transform-origin: center center;
+        transform: rotate(360deg) translateX(160px) translateY(240px) rotate(-360deg);
+      }
+  }
+
+  @keyframes orbit4 {
+    from {
+      transform-origin: center center;
+      transform: rotate(0) translateX(-160px) translateY(-240px) rotate(0);
+    }
+    to {
+      transform-origin: center center;
+      transform: rotate(360deg) translateX(-160px) translateY(-240px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit5 {
+    from {
+        transform-origin: center center;
+        transform: rotate(0) translateX(140px) translateY(-260px) rotate(0);
+      }
+      to {
+        transform-origin: center center;
+        transform: rotate(360deg) translateX(140px) translateY(-260px) rotate(-360deg);
+      }
+  }
+
+  @keyframes orbit6 {
+    from {
+        transform-origin: center center;
+        transform: rotate(0) translateX(-140px) translateY(260px) rotate(0);
+      }
+      to {
+        transform-origin: center center;
+        transform: rotate(360deg) translateX(-140px) translateY(260px) rotate(-360deg);
+      }
+  }
+  
+  /* Adjust orbit speed, distance, size, color, etc., as needed */
+
+  
