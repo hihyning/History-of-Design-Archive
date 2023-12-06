@@ -7,12 +7,12 @@
 
 
 a:hover {
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 }
 
 body {
-    cursor: url('static/red\ dot\ cursor.png'), auto;
-    background-image: url('/static/pop/pop\ background.jpg');
+    cursor: url('./static/red\ dot\ cursor.png'), auto;
+    background-image: url('./static/pop/pop\ background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
