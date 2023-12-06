@@ -14,13 +14,11 @@ body, html {
     font-family: 'Dhurjati', sans-serif;
     color: aliceblue;
     text-align: center;
-    font-size: 50pt; 
+    vertical-align: middle;
+    font-size: 30pt;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 50px;
+    padding: 0;
+    line-height: 80%;
   }
 
   h2 {
@@ -42,14 +40,14 @@ body, html {
     color: white;
     margin: 0;
     padding: 0px;
-    line-height: 17px;
+    line-height: 18px;
     font-size: 10pt;
     text-align: center;
     text-overflow:ellipsis;
     vertical-align: middle;
-    top: 50%;
-    left: 50%;
-    transform: translate(0, 50%);
+    bottom: 5%;
+    position: absolute;
+
   }
 
   #infoCardSubHeader {
