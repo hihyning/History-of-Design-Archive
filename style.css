@@ -21,7 +21,7 @@ input[type="text"] {
     left: 0;
     width: 100%;
     height: 100%;
-    cursor: url('static/red\ dot\ cursor.png'), auto;
+    cursor: url('./static/red\ dot\ cursor.png'), auto;
     pointer-events: none; /* This allows clicks to pass through */
 }
 
@@ -32,7 +32,7 @@ button {
     border: none;
     font-family: "Futura", sans-serif;
     border-radius: 12px;
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 }
 
 html, body {
@@ -40,12 +40,12 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    cursor: url('static/red\ dot\ cursor.png'), auto;
+    cursor: url('./static/red\ dot\ cursor.png'), auto;
     z-index: 0;
 }
 
 a:hover {
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 }
 
 body {
@@ -54,7 +54,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #ece5da; 
-    cursor: url('static/red\ dot\ cursor.png'), auto;
+    cursor: url('./static/red\ dot\ cursor.png'), auto;
     padding: 0;
     margin: 0;
     z-index: 1;
@@ -278,7 +278,7 @@ p {
 }
 
 .image-link-wrapper5:hover {
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 }
 
 .image-container5 {
