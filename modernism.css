@@ -65,7 +65,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-    cursor: url('static/red\ dot\ cursor.png'), auto;
+    cursor: url('./static/red\ dot\ cursor.png'), auto;
 }
 
 .container {
@@ -85,7 +85,7 @@ body {
     overflow: hidden;
     z-index: 1;
     border: 9px solid rgb(0, 0, 0); /* Thick black border */
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 
 }
 
@@ -99,19 +99,19 @@ body {
 
 .shape:hover img {
     opacity: 1;
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 }
 
 /* Hover effect to fade out the background color */
 .shape:hover::before {
     opacity: 0;
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 
 }
 
 .shape img {
     display: block;  /* Initially show the image */
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 }
 
 .shape .text-content {
@@ -122,13 +122,13 @@ body {
     word-wrap: break-word; /* Break words to prevent overflow */
     overflow-wrap: break-word; /* Break words to prevent overflow */
     overflow: hidden; /* Hide overflow, or use 'auto' to add scroll */
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 }
 
 .shape.clicked img {
     display: none;  /* Hide image on click */
     border-width: 0;
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
 }
 
 .shape.clicked .text-container{
@@ -151,7 +151,7 @@ body {
 }
 
 #clickable-h1:hover {
-    cursor: url('static/red\ dot\ cursor\ hover.png'), auto;
+    cursor: url('./static/red\ dot\ cursor\ hover.png'), auto;
     color: blue; /* Changes color to red on hover */
 }
 #clickable-h1.clicked #new-text {
