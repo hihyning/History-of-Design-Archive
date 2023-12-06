@@ -10,19 +10,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
     "Designed by Charles and Ray Eames in 1946, the Eames Molded Plywood Lounge Chair was born out of the technological advancements of the post-war era. Its innovative use of plywood molding techniques, initially developed for wartime purposes, was a direct response to the period's resourcefulness and efficiency. This chair symbolized a shift towards functional, yet aesthetically pleasing furniture in the post-war design movement, influencing the way everyday objects were designed and produced.", "WHAT IS THE POST WAR ERA? The post-war design movement, flourishing after World War II, reflected the era\'s optimism and technological advancements. The Space Race notably influenced design, infusing a fascination with space-age aesthetics into furniture, architecture, and consumer goods. This period embraced futuristic forms, metallic finishes, and innovation, mirroring the sleekness of space exploration. It was a time of creative expansion, driven by advancements in space technology and a forward-looking ethos, reshaping design with a focus on new materials and the excitement of the future."];
     
     let infoCardHeaders = [
-        "POST WAR","Egg Chair by Arne Jacobsen (1958)","Graphic Design and Posters (1945-1985)","Verner Panton: Panton Chair (1960)","Charles Harrison: View-Master (1939)", "Eero Aarnio: Ball Chair (1963)", "Eames: Molded Plywood Lounge Chair (1946)"
+        "","Egg Chair by Arne Jacobsen (1958)","Graphic Design and Posters (1945-1985)","Verner Panton: Panton Chair (1960)","Charles Harrison: View-Master (1939)", "Eero Aarnio: Ball Chair (1963)", "Eames: Molded Plywood Lounge Chair (1946)"
     ];    
     
     for (let i = 1 ; i < 7; i++){
         document.getElementById('orbit'+i).addEventListener('click', function() {
             let currObject = document.getElementById('orbit'+i);
             let active = currObject.style.boxShadow; 
-            clearGlow();
+            let titleCard = document.getElementById('titleCard');
+            if (titleCard) {
+                titleCard.style.display = 'none';
+            }
+
+            clearGlow()
 
             if (!active){
                 currObject.style.boxShadow = "0px 0px 40px 10px #FAF9F0";
                 document.getElementById('infoCardHeader').textContent = infoCardHeaders[i];
                 document.getElementById('infoCardInfo').textContent = infoCardInfos[i];
+                let titleCard = document.getElementById('titleCard');
+            if (titleCard) {
+                titleCard.style.display = 'none';
+            }
             }
             else {
                 console.log("off");
@@ -52,6 +61,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('infoCard').addEventListener('click', function() {
         let currObject = document.getElementById('infoCard');
         let active = currObject.style.boxShadow; 
+        let titleCard = document.getElementById('titleCard');
+            if (titleCard) {
+                titleCard.style.display = 'none';
+            }
 
         if (!active){
             currObject.style.boxShadow = "0px 0px 50px 10px #FAF9F0";
